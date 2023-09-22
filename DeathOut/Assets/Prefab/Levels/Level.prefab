@@ -395,6 +395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1360184363094662344}
   - component: {fileID: 1360184363094662345}
+  - component: {fileID: 7088902326873435249}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -434,6 +435,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paddleOrigin: {fileID: 3485753887810369030}
   bricks: {fileID: 1360184363299281476}
+--- !u!114 &7088902326873435249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360184363094662343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b981589f5d81b48811e7554a71e6c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: {x: 10, y: 22}
+  offset: {x: 0, y: 0}
+  gridColor: {r: 1, g: 0.7325909, b: 0, a: 1}
 --- !u!1 &1360184363154619355
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ using UnityEngine;
             particlesPlayer.Initialize();
 
             foreach (var brick in bricks)
-                brick.LifeOutEvent += OnBrickDestroy;
+                brick.HitPointsOutEvent += OnBrickDestroy;
         }
         
         private void OnBrickDestroy(Brick sender) {
