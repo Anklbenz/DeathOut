@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 40901606}
   - component: {fileID: 40901605}
+  - component: {fileID: 40901607}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -153,7 +154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
-  _monoInstallers: []
+  _monoInstallers:
+  - {fileID: 40901607}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -186,6 +188,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &40901607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40901604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd528fd53bff3e24299fe2ce37f2a34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &56736801
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383896585}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17903623, y: 4.3025713, z: -4.2648563}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -330,17 +344,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 383896585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0641a4f92359cb148a2e077a008c6855, type: 3}
+  m_Script: {fileID: 11500000, guid: 45b981589f5d81b48811e7554a71e6c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particlesPlayer:
-    destroyPrefab: {fileID: 198114382706122378, guid: 4853cda40bcc49347af48f302dd5294a, type: 3}
-    onCollisionPrefab: {fileID: 198126016265271784, guid: 54489d01dae104841844c25e9d2ede27, type: 3}
-    parent: {fileID: 911994662}
-  levelPrefab: {fileID: 1360184363094662345, guid: 4cb00973b33eae54b8ed39682d9d9b1f, type: 3}
-  paddlePrefab: {fileID: 4379953654239011457, guid: c382ff84adb80f5438bd5a8cb1f19954, type: 3}
-  ballPrefab: {fileID: 6919904815795975566, guid: 8abbce41e8e4e944b8c2f9adc34ea5ad, type: 3}
-  controller: {fileID: 1320447927}
+  gameFieldSize: {x: 10, y: 22}
+  isGridVisible: 1
+  gridColor: {r: 0.3433962, g: 1, b: 0.5095004, a: 1}
+  isWallsVisible: 1
+  wallsColor: {r: 0, g: 0, b: 0, a: 1}
+  isPaddleZoneVisible: 1
+  lineNumber: -3
+  paddleZoneColor: {r: 1, g: 0.17358488, b: 0.17358488, a: 1}
+  isHorizontalCenterLineVisible: 1
+  horizontalCenterLineColor: {r: 1, g: 0.7587606, b: 0, a: 1}
+  isVerticalCenterLineVisible: 1
+  verticalCenterLineColor: {r: 0.8490566, g: 0.6998536, b: 0.051263746, a: 1}
 --- !u!1 &386157634
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,16 +1,22 @@
 using System;
 using UnityEngine;
+
 public class Brick : MonoBehaviour, IDamageable {
 	[SerializeField] protected int hitPoints;
-	public event Action<Brick> HitPointsOutEvent;
+	public event Action<Vector3> HitEvent, DestroyedEvent;
 
 	public void Hit(int power) {
 		hitPoints -= power;
-		NotifyIfHitPointsOut();
+		HitNotify();
+		DestroyAndNotify();
 	}
 	
-	private void NotifyIfHitPointsOut() {
-		if (hitPoints <= 0)
-			HitPointsOutEvent?.Invoke(this);
+	private void HitNotify() =>
+			HitEvent?.Invoke(transform.position);
+
+	private void DestroyAndNotify() {
+		if (hitPoints > 0) return;
+
+		DestroyedEvent?.Invoke(transform.position);
 	}
 }
